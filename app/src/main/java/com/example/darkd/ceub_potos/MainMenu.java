@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.darkd.ceub_potos.Fragments.FragmentMain;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsHoteles;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -21,9 +22,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MainMenu extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
+public class MainMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,10 +39,10 @@ public class MainMenu extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsHoteles()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMain()).commit();
     }
 
     @Override
@@ -80,36 +81,27 @@ public class MainMenu extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
+        //si esta seleccionado retornar
+        if(item.isChecked())
+            return true;
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.hoteles) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsHoteles()).commit();
+        } else if (id == R.id.restaurantes) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.salud) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.finacieras) {
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onMapReady(GoogleMap map) {
-        LatLng sydney = new LatLng(-33.867, 151.206);
-
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
-
-        map.addMarker(new MarkerOptions()
-                .title("Sydney")
-                .snippet("The most populous city in Australia.")
-                .position(sydney));
     }
 }

@@ -41,8 +41,9 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        if(null== savedInstanceState)
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMain()).commit();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMain()).commit();
     }
 
     @Override
@@ -88,8 +89,9 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
         if(item.isChecked())
             return true;
         int id = item.getItemId();
-
-        if (id == R.id.hoteles) {
+        if(id == R.id.home){
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMain()).commit();
+        } else if (id == R.id.hoteles) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsHoteles()).commit();
         } else if (id == R.id.restaurantes) {
 

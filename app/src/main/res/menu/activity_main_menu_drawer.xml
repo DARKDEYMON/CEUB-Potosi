@@ -5,12 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_bancos6"
+            android:title="Home"
+            android:checked="true"/>
+        <item
             android:id="@+id/hoteles"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_hotel_black_24dp"
             android:title="Hoteles" />
         <item
             android:id="@+id/restaurantes"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_local_dining_black_24dp"
             android:title="Restaurantes" />
         <item
             android:id="@+id/salud"

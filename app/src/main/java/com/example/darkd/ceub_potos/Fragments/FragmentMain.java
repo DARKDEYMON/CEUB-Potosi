@@ -36,7 +36,6 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
         LinearLayout hin = (LinearLayout)view.findViewById(R.id.hotelesin);
         hin.setOnClickListener(this);
-
     }
 
     @Override
@@ -44,7 +43,11 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
         int i = v.getId();
         switch (i){
             case R.id.hotelesin:
-                Log.e("click","uno");
+                FragmentDataHoteles nextFrag= new FragmentDataHoteles();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contenedor, nextFrag)
+                        .addToBackStack(null)
+                        .commit();
                 break;
         }
     }

@@ -6,10 +6,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.darkd.ceub_potos.R;
+import com.example.darkd.ceub_potos.StacticMethods;
 import com.example.darkd.ceub_potos.clases.Hoteles;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
@@ -35,8 +37,16 @@ public class FragmentDetailHoteles extends Fragment {
         ImageView i = (ImageView) view.findViewById(R.id.imagen);
         Picasso.with(getContext()).load(hotel.getImagen().toString()).into(i);
 
-        TextView t =(TextView)view.findViewById(R.id.nombre);
-        t.setText(hotel.getNombre());
+        ((TextView)view.findViewById(R.id.nombre)).setText(hotel.getNombre());
+        ((TextView)view.findViewById(R.id.direccion)).setText(hotel.getDireccion());
+        ((TextView)view.findViewById(R.id.web)).setText(hotel.getWeb());
+        ((TextView)view.findViewById(R.id.email)).setText(hotel.getEmail());
+        ((Button)view.findViewById(R.id.llevame)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StacticMethods.llevame(getActivity(),hotel.getUbicacion());
+            }
+        });
         return view;
     }
 

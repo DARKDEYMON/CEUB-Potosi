@@ -23,7 +23,7 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_bancos6" />
+                android:src="@drawable/ic_ico_hotel" />
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
@@ -35,11 +35,11 @@
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lista de Hoteles" />
+                    android:text="Hoteles" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="presione para ver una lista de los hoteles" />
+                    android:text="Presione para ver una lista de los hoteles" />
             </LinearLayout>
 
         </LinearLayout>
@@ -61,7 +61,7 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_local_dining_black_24dp" />
+                android:src="@drawable/ic_ico_comida" />
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
@@ -73,11 +73,11 @@
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lista de Restaurantes" />
+                    android:text="Restaurantes" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="presione para ver una lista de los restaurantes  " />
+                    android:text="Presione para ver una lista de los restaurantes  " />
             </LinearLayout>
 
         </LinearLayout>
@@ -86,6 +86,80 @@
             android:layout_height="1dp"
             android:background="@color/colorAccent" />
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/centrossaludin"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:clipToPadding="false">
 
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_ico_medico" />
+            <LinearLayout
+                android:layout_marginLeft="7dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Centros de Salud" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Presione para ver una lista de los Centros de salud  " />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:id="@+id/bancosin"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_ico_banco" />
+            <LinearLayout
+                android:layout_marginLeft="7dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bancos" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Presione para ver una lista de bancos" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+    </LinearLayout>
 </FrameLayout>

@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.FragmentDataHoteles">
+    tools:context=".Fragments.FragmentDataRestaurantes">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView
-        android:id="@+id/listahoteles"
+        android:id="@+id/listarestaurantes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@color/colorAccent"
-        android:dividerHeight="1dp">
-    </ListView>
+        android:dividerHeight="1dp"/>
 
 </FrameLayout>

@@ -1,17 +1,22 @@
 package com.example.darkd.ceub_potos.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.darkd.ceub_potos.R;
 import com.example.darkd.ceub_potos.clases.Hoteles;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,11 +52,31 @@ public class AdapterHoteles extends BaseAdapter {
         View view = layout.inflate(R.layout.adapter_item_hoteles,parent,false);
 
         Hoteles ho =aHoteles.get(position);
-        ImageView i = (ImageView) view.findViewById(R.id.image);
-        Log.e("Aqui",ho.getImagen().toString());
-        Picasso.with(context).load(ho.getImagen().toString()).into(i);
+        final LinearLayout layoutbase = view.findViewById(R.id.lineaprinsipal);
 
-        ((TextView)view.findViewById(R.id.titulo)).setText(ho.getNombre());
+
+        //ImageView i = (ImageView) view.findViewById(R.id.image);
+        //Log.e("Aqui",ho.getImagen().toString());
+        //Picasso.with(context).load(ho.getImagen().toString()).into(i);
+
+        Picasso.with(context).load(ho.getImagen().toString()).into(new Target() {
+            @Override
+            public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+                layoutbase.setBackground(new BitmapDrawable(bitmap));
+            }
+
+            @Override
+            public void onBitmapFailed(Drawable errorDrawable) {
+
+            }
+
+            @Override
+            public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+            }
+        });
+
+        ((TextView)view.findViewById(R.id.nombre)).setText(ho.getNombre());
         ((TextView)view.findViewById(R.id.telefono)).setText(ho.getTelefono());
         return view;
     }

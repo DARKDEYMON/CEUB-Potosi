@@ -34,8 +34,11 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        LinearLayout hin = (LinearLayout)view.findViewById(R.id.hotelesin);
-        hin.setOnClickListener(this);
+
+        ((LinearLayout)view.findViewById(R.id.hotelesin)).setOnClickListener(this);
+        ((LinearLayout)view.findViewById(R.id.restaurantesin)).setOnClickListener(this);
+        ((LinearLayout)view.findViewById(R.id.centrossaludin)).setOnClickListener(this);
+        ((LinearLayout)view.findViewById(R.id.bancosin)).setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +51,24 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
                         .replace(R.id.contenedor, nextFrag)
                         .addToBackStack(null)
                         .commit();
+                break;
+            case R.id.restaurantesin:
+                FragmentDataRestaurantes nextFrag1= new FragmentDataRestaurantes();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contenedor, nextFrag1)
+                        .addToBackStack(null)
+                        .commit();
+                break;
+            case R.id.centrossaludin:
+                Log.e("aqui","salud");
+                FragmentDataCentrosSalud nextFrag2= new FragmentDataCentrosSalud();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contenedor, nextFrag2)
+                        .addToBackStack(null)
+                        .commit();
+                break;
+            case R.id.bancosin:
+                Log.e("aqui","bancos");
                 break;
         }
     }

@@ -2,23 +2,26 @@ package com.example.darkd.ceub_potos.clases;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Restaurantes {
     private String nombre;
     private String direccion;
-    private String servicios;
-    private int telefono;
-    private URL facebook;
-    private LatLng ubicaion;
+    private String telefono;
+    private LatLng ubicacion;
+    private URL imagen;
 
-    public Restaurantes(String nombre, String direccion, String servicios, int telefono, URL facebook, float lat, float lng) {
+    public Restaurantes(String nombre, String direccion, String telefono, String imagen, float lat, float lng) {
         this.nombre = nombre;
         this.direccion = direccion;
-        this.servicios = servicios;
         this.telefono = telefono;
-        this.facebook = facebook;
-        this.ubicaion = new LatLng(lat,lng);
+        try {
+            this.imagen = new URL(imagen);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        this.ubicacion = new LatLng(lat,lng);
     }
 
     public String getNombre() {
@@ -37,35 +40,27 @@ public class Restaurantes {
         this.direccion = direccion;
     }
 
-    public String getServicios() {
-        return servicios;
-    }
-
-    public void setServicios(String servicios) {
-        this.servicios = servicios;
-    }
-
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public URL getFacebook() {
-        return facebook;
+    public LatLng getUbicacion() {
+        return ubicacion;
     }
 
-    public void setFacebook(URL facebook) {
-        this.facebook = facebook;
+    public void setUbicacion(LatLng ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
-    public LatLng getUbicaion() {
-        return ubicaion;
+    public URL getImagen() {
+        return imagen;
     }
 
-    public void setUbicaion(LatLng ubicaion) {
-        this.ubicaion = ubicaion;
+    public void setImagen(URL imagen) {
+        this.imagen = imagen;
     }
 }

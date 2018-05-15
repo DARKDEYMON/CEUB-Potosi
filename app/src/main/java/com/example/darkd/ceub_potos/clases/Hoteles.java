@@ -2,6 +2,7 @@ package com.example.darkd.ceub_potos.clases;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Hoteles {
@@ -14,7 +15,7 @@ public class Hoteles {
     private LatLng ubicacion;
     private URL imagen;
 
-    public Hoteles(String nombre, int categoria, String direccion, String telefono, String web, String email, float lat, float lng, URL imagen) {
+    public Hoteles(String nombre, int categoria, String direccion, String telefono, String web, String email, float lat, float lng, String imagen) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.direccion = direccion;
@@ -22,7 +23,11 @@ public class Hoteles {
         this.web = web;
         this.email = email;
         this.ubicacion = new LatLng(lat,lng);
-        this.imagen = imagen;
+        try {
+            this.imagen =new URL(imagen);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getNombre() {

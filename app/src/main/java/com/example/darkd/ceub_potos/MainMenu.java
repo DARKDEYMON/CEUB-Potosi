@@ -14,7 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.darkd.ceub_potos.Fragments.FragmentMain;
+import com.example.darkd.ceub_potos.Fragments.FragmentMapsCentroSalud;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsHoteles;
+import com.example.darkd.ceub_potos.Fragments.FragmentMapsRestaurantes;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -94,9 +96,9 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
         } else if (id == R.id.hoteles) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsHoteles()).commit();
         } else if (id == R.id.restaurantes) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsRestaurantes()).commit();
         } else if (id == R.id.salud) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsCentroSalud()).commit();
         } else if (id == R.id.finacieras) {
 
         } else if (id == R.id.nav_share) {

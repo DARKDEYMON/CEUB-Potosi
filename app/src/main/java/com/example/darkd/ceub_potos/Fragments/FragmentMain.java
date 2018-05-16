@@ -39,6 +39,8 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
         ((LinearLayout)view.findViewById(R.id.restaurantesin)).setOnClickListener(this);
         ((LinearLayout)view.findViewById(R.id.centrossaludin)).setOnClickListener(this);
         ((LinearLayout)view.findViewById(R.id.bancosin)).setOnClickListener(this);
+        ((LinearLayout)view.findViewById(R.id.turismoin)).setOnClickListener(this);
+        ((LinearLayout)view.findViewById(R.id.entretenimientoin)).setOnClickListener(this);
     }
 
     @Override
@@ -67,7 +69,6 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
                         .commit();
                 break;
             case R.id.bancosin:
-                Log.e("aqui","bancos");
                 FragmentDataBancos nextFrag3= new FragmentDataBancos();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.contenedor, nextFrag3)
@@ -75,10 +76,18 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
                         .commit();
                 break;
             case R.id.turismoin:
-
+                FragmentDataTurismo nextFrag4= new FragmentDataTurismo();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contenedor, nextFrag4)
+                        .addToBackStack(null)
+                        .commit();
                 break;
-            case R.id.entretenimiento:
-
+            case R.id.entretenimientoin:
+                FragmentDataEntretenimiento nextFrag5= new FragmentDataEntretenimiento();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contenedor, nextFrag5)
+                        .addToBackStack(null)
+                        .commit();
                 break;
         }
     }

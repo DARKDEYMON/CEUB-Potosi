@@ -17,8 +17,10 @@ import android.view.MenuItem;
 import com.example.darkd.ceub_potos.Fragments.FragmentMain;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsBancos;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsCentroSalud;
+import com.example.darkd.ceub_potos.Fragments.FragmentMapsEntretenimiento;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsHoteles;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsRestaurantes;
+import com.example.darkd.ceub_potos.Fragments.FragmentMapsTurismo;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -115,9 +117,13 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
             fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
             fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsBancos()).commit();
         } else if (id == R.id.turismo) {
-
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsTurismo()).commit();
         } else if (id == R.id.entretenimiento) {
-
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsEntretenimiento()).commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

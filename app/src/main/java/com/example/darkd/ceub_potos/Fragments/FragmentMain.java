@@ -60,7 +60,6 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
                         .commit();
                 break;
             case R.id.centrossaludin:
-                Log.e("aqui","salud");
                 FragmentDataCentrosSalud nextFrag2= new FragmentDataCentrosSalud();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.contenedor, nextFrag2)
@@ -69,6 +68,17 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
                 break;
             case R.id.bancosin:
                 Log.e("aqui","bancos");
+                FragmentDataBancos nextFrag3= new FragmentDataBancos();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contenedor, nextFrag3)
+                        .addToBackStack(null)
+                        .commit();
+                break;
+            case R.id.turismoin:
+
+                break;
+            case R.id.entretenimiento:
+
                 break;
         }
     }

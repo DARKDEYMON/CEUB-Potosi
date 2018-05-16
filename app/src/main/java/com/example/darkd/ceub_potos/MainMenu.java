@@ -3,6 +3,7 @@ package com.example.darkd.ceub_potos;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.darkd.ceub_potos.Fragments.FragmentMain;
+import com.example.darkd.ceub_potos.Fragments.FragmentMapsBancos;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsCentroSalud;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsHoteles;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsRestaurantes;
@@ -92,14 +94,29 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
             return true;
         int id = item.getItemId();
         if(id == R.id.home){
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMain()).commit();
+            //pop inclusive quita el boton retroceser
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMain()).commit();
         } else if (id == R.id.hoteles) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsHoteles()).commit();
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsHoteles()).commit();
         } else if (id == R.id.restaurantes) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsRestaurantes()).commit();
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsRestaurantes()).commit();
         } else if (id == R.id.salud) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMapsCentroSalud()).commit();
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsCentroSalud()).commit();
         } else if (id == R.id.finacieras) {
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsBancos()).commit();
+        } else if (id == R.id.turismo) {
+
+        } else if (id == R.id.entretenimiento) {
 
         } else if (id == R.id.nav_share) {
 

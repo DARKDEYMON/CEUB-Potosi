@@ -42,6 +42,5 @@ public class FragmentDataCentrosSalud extends Fragment {
         adCentroSalud = new AdapterCentroSalud(getActivity(),arCentroSalud);
         lstCentroSalud = view.findViewById(R.id.listcentrosalud);
         lstCentroSalud.setAdapter(adCentroSalud);
-
     }
 }

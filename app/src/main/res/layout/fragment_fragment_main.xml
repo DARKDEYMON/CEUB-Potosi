@@ -23,7 +23,8 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_ico_hotel" />
+                android:src="@drawable/ic_ico_hotel"
+                android:tint="@color/strip1"/>
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
@@ -61,7 +62,8 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_ico_comida" />
+                android:src="@drawable/ic_ico_comida"
+                android:tint="@color/strip2"/>
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
@@ -99,7 +101,8 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_ico_medico" />
+                android:src="@drawable/ic_ico_medico"
+                android:tint="@color/strip1"/>
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
@@ -137,7 +140,8 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_ico_banco" />
+                android:src="@drawable/ic_ico_banco"
+                android:tint="@color/strip2"/>
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
@@ -175,7 +179,8 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_ico_turismo" />
+                android:src="@drawable/ic_ico_turismo"
+                android:tint="@color/strip1"/>
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
@@ -213,7 +218,8 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_ico_disco" />
+                android:src="@drawable/ic_ico_disco"
+                android:tint="@color/strip2"/>
             <LinearLayout
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"

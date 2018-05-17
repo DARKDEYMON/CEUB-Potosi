@@ -20,7 +20,7 @@ public class HotelesData {
                     "Calle Bolívar N° 965",
                     "(591-2) 62-22627",
                     null,
-                    "info@potosihotel.com",
+                    "info@p otosihotel.com",
                     -19.587680f,
                     -65.751425f,
                     "https://lh3.googleusercontent.com/qBBo7K3vV97KSoH29WvmnjmnWgyaIAfs7VzpXIb3Wz6SRgMMYxY2xfdVFQjMAMa3lM7_uz1xuFqM5Ulnd3rjSbvK-GLxngIAJ8z4H3eI1VuNC8zKOahy0_mHgTJ35zSB68hd5N0jHg=w2400"));
@@ -33,7 +33,7 @@ public class HotelesData {
                     -19.583097f,
                     -65.757397f,
                     "https://lh3.googleusercontent.com/ikqLzF7epFa0uA2hFOliZtNbucPtDVOMSXccBEksyTQdMCtPkzAUjuAa1XUTO_O3--_6ugU9jRwzKiluh2zTtmF3VhtFjnIye5Z7scVCZ7BXqcjD1Rn3qFdhtjgm5gVzQu8tqEr6Ww=w2400"));
-
+            
             llenadoho=false;
         }
         return hoteles;

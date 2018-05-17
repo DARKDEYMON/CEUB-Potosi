@@ -124,11 +124,11 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
             FragmentManager fr = getSupportFragmentManager();
             fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
             fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsEntretenimiento()).commit();
-        } else if (id == R.id.nav_share) {
+        } /*else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
-        }
+        }*/
         return true;
     }
 }

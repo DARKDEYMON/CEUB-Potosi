@@ -7,45 +7,46 @@
         <item
             android:id="@+id/home"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Home"
+            android:title="Página Principal"
             android:checked="true"/>
         <item
             android:id="@+id/hoteles"
             android:icon="@drawable/ic_ico_hotel"
-            android:title="Hoteles" />
+            android:title="Mapa de Hoteles" />
         <item
             android:id="@+id/restaurantes"
             android:icon="@drawable/ic_ico_comida"
-            android:title="Restaurantes" />
+            android:title="Mapa de Restaurantes" />
         <item
             android:id="@+id/salud"
             android:icon="@drawable/ic_ico_medico"
-            android:title="Centros de salud" />
+            android:title="Mapa de Centros de salud" />
         <item
             android:id="@+id/finacieras"
             android:icon="@drawable/ic_ico_banco"
-            android:title="Bancos" />
+            android:title="Mapa de Bancos" />
         <item
             android:id="@+id/turismo"
             android:icon="@drawable/ic_ico_turismo"
-            android:title="Atractivos turisticos" />
+            android:title="Mapa de Atractivos turisticos" />
         <item
             android:id="@+id/entretenimiento"
             android:icon="@drawable/ic_ico_disco"
-            android:title="Entretenimiento" />
+            android:title="Mapa de Entretenimiento" />
     </group>
 
+    <!--
     <item android:title="Varios">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Cronograma" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
         </menu>
     </item>
-
+    -->
 </menu>

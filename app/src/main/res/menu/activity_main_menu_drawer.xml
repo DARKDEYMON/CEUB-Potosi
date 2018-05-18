@@ -33,6 +33,10 @@
             android:id="@+id/entretenimiento"
             android:icon="@drawable/ic_ico_disco"
             android:title="Mapa de Entretenimiento" />
+        <item
+            android:id="@+id/lugaresevento"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Lugares del Evento" />
     </group>
 
     <!--

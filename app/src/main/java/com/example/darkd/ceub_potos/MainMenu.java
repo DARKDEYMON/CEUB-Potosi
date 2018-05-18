@@ -1,5 +1,6 @@
 package com.example.darkd.ceub_potos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,7 @@ import com.example.darkd.ceub_potos.Fragments.FragmentMapsBancos;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsCentroSalud;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsEntretenimiento;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsHoteles;
+import com.example.darkd.ceub_potos.Fragments.FragmentMapsLugaresEvento;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsRestaurantes;
 import com.example.darkd.ceub_potos.Fragments.FragmentMapsTurismo;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -48,8 +50,11 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        if(null== savedInstanceState)
+        if(null== savedInstanceState){
+            Intent i = new Intent(MainMenu.this,MainActivityPresentation.class);
+            startActivity(i);
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentMain()).commit();
+        }
     }
 
     @Override
@@ -124,9 +129,11 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
             FragmentManager fr = getSupportFragmentManager();
             fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
             fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsEntretenimiento()).commit();
-        } /*else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.lugaresevento) {
+            FragmentManager fr = getSupportFragmentManager();
+            fr.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fr.beginTransaction().replace(R.id.contenedor, new FragmentMapsLugaresEvento()).commit();
+        } /*else if (id == R.id.nav_send) {
 
         }*/
         return true;
